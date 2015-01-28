@@ -126,17 +126,17 @@ public class RespawnModule implements Module {
                 player.getInventory().setItem(0, new ItemStack(Material.COMPASS));
                 ItemStack howTo = new ItemStack(Material.WRITTEN_BOOK);
                 ItemMeta howToMeta = howTo.getItemMeta();
-                howToMeta.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Coming Soon");
+                howToMeta.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Dentro de poco");
                 howTo.setItemMeta(howToMeta);
                 BookMeta howToBookMeta = (BookMeta) howTo.getItemMeta();
-                howToBookMeta.setAuthor(ChatColor.GOLD + "CardinalPGM");
+                howToBookMeta.setAuthor(ChatColor.GOLD + "Joserex65");
                 howTo.setItemMeta(howToBookMeta);
                 player.getInventory().setItem(1, howTo);
                 if (!GameHandler.getGameHandler().getMatch().getState().equals(MatchState.ENDED)) {
                     ItemStack picker = new ItemStack(Material.LEATHER_HELMET);
                     ItemMeta pickerMeta = picker.getItemMeta();
-                    pickerMeta.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Team Selection");
-                    pickerMeta.setLore(Arrays.asList(ChatColor.DARK_PURPLE + "Join the game!"));
+                    pickerMeta.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Elección de equipo");
+                    pickerMeta.setLore(Arrays.asList(ChatColor.DARK_PURPLE + "Entra al juego!"));
                     picker.setItemMeta(pickerMeta);
                     player.getInventory().setItem(2, picker);
                 }
