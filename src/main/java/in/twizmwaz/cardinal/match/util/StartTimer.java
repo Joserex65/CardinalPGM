@@ -26,14 +26,14 @@ public class StartTimer implements Runnable, Cancellable {
     public void run() {
         if (!isCancelled()) {
             if ((time % 5 == 0 && time > 0) || (time < 5 && time > 0)) {
-                Bukkit.broadcastMessage(ChatColor.GREEN + "Match starting in " + ChatColor.DARK_RED + time + ChatColor.GREEN + " seconds");
+                Bukkit.broadcastMessage(ChatColor.GREEN + "La partida empieza en " + ChatColor.DARK_RED + time + ChatColor.GREEN + " segundo(s)");
             }
             if (time == 0) {
                 if (match.getState() != MatchState.STARTING) {
                     return;
                 } else {
                     match.setState(MatchState.PLAYING);
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The match has started!");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "La partida ha empezado!");
                     Bukkit.getServer().getPluginManager().callEvent(new MatchStartEvent());
                 }
             } else {
