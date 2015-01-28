@@ -112,7 +112,7 @@ public class TeamPicker implements Module {
                     if (event.getPlayer().getItemInHand().getType().equals(Material.LEATHER_HELMET)) {
                         if (event.getPlayer().getItemInHand().hasItemMeta()) {
                             if (event.getPlayer().getItemInHand().getItemMeta().hasDisplayName()) {
-                                if (event.getPlayer().getItemInHand().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "" + ChatColor.BOLD + "Team Selection")) {
+                                if (event.getPlayer().getItemInHand().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "" + ChatColor.BOLD + "Elección de equipo")) {
                                     event.getPlayer().openInventory(getTeamPicker());
                                 }
                             }
